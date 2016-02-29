@@ -23,10 +23,10 @@ ggplot(cocaine, aes(x=weight,y=price)) + geom_point()
 #Here we make use of the '%>%' - pipes and we don't need to use the 'aes' function to specify the mappings of columns
 #The resultant graph comes up in the 'Viewer' pane
 
-#fill - color of the dot
+#fill - color of the dot in a scatterplot
 cocaine %>% ggvis(x=~weight, y=~price, fill =~potency) %>% layer_points()
 
-#stork - color of the outline of the dots 
+#stroke - color of the outline of the dots in a scatterplot 
 cocaine %>% ggvis(x=~weight, y=~price, stroke =~potency) %>% layer_points()
 
 #When assigning a value to an aesthetic we use ':=' instead of '~='
